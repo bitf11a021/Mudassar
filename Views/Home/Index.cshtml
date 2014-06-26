@@ -1,0 +1,72 @@
+
+
+@{
+    ViewBag.Title = "";
+    Layout = "~/Views/Shared/Layout.cshtml";
+    
+}
+<script>
+    function SerachJobValidation()
+    {
+        if (document.Search_Job.MajorField.value == "" && document.Search_Job.Location.value=="")
+        {
+            alert("Both fields are empty atleast one field is requiewd");
+            return false;
+        }
+       
+        return true;
+    }
+    
+
+</script>
+
+		 	<table>
+            	<tr>
+                    <form  action="/Jobs/SearchJob" id="search_form" name="Search_Job" onSubmit="return SerachJobValidation();">
+            		<td><h2>Search Job  &nbsp;&nbsp;&nbsp;&nbsp;</h2></td>
+            	<td>
+                <input class="search" type="text" name="MajorField" placeholder="Major Field" value=""/>
+               	</> </td>
+                	<td><input class="search" type="text" name="Location" placeholder="City Name" value="" /></td>
+                <td><input name="search" type="image" style="border: 2; margin: 0 0 -9px 5px;" src="../../Images/MyImages/search.png" alt="Search" 
+                    title="Search" /></td>
+              </p>
+
+                    </form>
+
+            	</tr>
+		</table>
+        
+        
+        <table>
+            	<form method="post" action="/UserCV/HireEmployee" id="search_emp" name="HireEmployee" onsubmit="return HireEmployeeValidation();">
+            	<tr>
+            		<td><h2>Search Emplyee</h2></td>
+            	<td>
+              	
+                <input class="search" type="text" width="100px" name="HireEmployee_field" placeholder="Job Field" />
+               	</> </td>
+                	<td><input class="search" type="text" name="Location" placeholder="City Name" /></td>
+                <td><input name="search" type="image" style="border: 2; margin: 0 0 -9px 5px;" src="../../Images/MyImages/search.png" alt="Search" title=
+                "Search" /></td>
+              </p>
+           
+            </tr>
+             </form>
+		</table>
+<script>
+    function HireEmployeeValidation()
+    {
+        if (document.HireEmployee.HireEmployee_field.value == "" && document.HireEmployee.Location.value=="")
+        {
+            
+                alert("Both fields are Empty");
+                return false;
+            
+        }
+        return true;
+    }
+
+</script>
+        
+        <!-- End f content here-->

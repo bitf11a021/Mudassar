@@ -1,0 +1,94 @@
+﻿@model EADFinalProjet.Models.RegisteredUser
+
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<h2>Login</h2>
+        <p>Login for registered user:</p>
+
+
+
+<script>
+    function Login_Validation()
+    {
+        if (document.LoginForm.your_name.value == "")
+        {
+            alert("Username field is empty");
+            return false;
+        }
+        if (document.LoginForm.your_email.value == "")
+        {
+            alert("Password field is empty");
+            return false;
+        }
+        if(document.LoginForm.em == "")
+        {
+            alert("Password field is empty");
+        }
+
+        return true;
+         
+    }
+
+</script>
+<script>
+    function signupvalidation()
+    {
+        if (document.signupform.em.value == "")
+        {
+            alert("Email field is empty");
+            return false;
+        }
+        if (document.signupform.conem.value == "") {
+            alert("Confirm Email field is empty");
+            return false;
+        }
+        if (document.signupform.conem.value != document.signupform.em.value)
+        {
+            alert(" Confirmed email is not match ");
+            return false;
+        }
+        if (document.signupform.pass.value == "") {
+            alert("Password field is empty");
+            return false;
+        }
+        if (document.signupform.confpass.value == "") {
+            alert("Confirm Password field is empty");
+            return false;
+        }
+        if (document.signupform.pass.value != document.signupform.confpass.value) {
+            alert("Connford password is not matched");
+            return false;
+        }
+
+        return true;
+    }
+   
+ </script>
+   <div id="lgn">
+        <form  name="LoginForm" method="post" action="/AccountHandler/HelperLogin" onSubmit=" return Login_Validation();"  >
+          <div class="form_settings" >
+            <p><span>Email</span><input class="contact" type="text" name="your_name" value="" /></p>
+            <p><span>Password</span><input class="contact" type="password" name="your_email" value="" /></p>   
+              <p style="padding-top: 15px"><span>&nbsp;</span><input class="submit" type="submit" name="contact_submitted" value="Sign in" />
+		</p>
+          </div>
+        </form >
+       </div>
+         <p><img src="~/Images/MyImages/side_back.png"/></p>
+
+        <h1>Sign Up</h1>
+        <p>Signup for non-registered user:</p>
+        <form  name="signupform" method="post" action="/AccountHandler/HelperSignup" onSubmit=" return signupvalidation();" >
+          <div class="form_settings" >
+            <p><span>Email</span><input class="contact" type="text" name="em" value="" /></p>
+            <p><span>Conferm Email</span><input class="contact" type="text" name="conem" value="" /></p>
+              <p><span>Password</span><input class="contact" type="password" name="pass" value="" /></p>
+              <p><span>Re-enter Password</span><input class="contact" type="password" name="confpass" value="" /></p>
+              <p style="padding-top: 15px"><span>&nbsp;</span><input class="submit" type="submit" name="contact_submitted" value="Sign Up" />
+		</p>
+          </div>
+        </form>
+         

@@ -1,0 +1,51 @@
+﻿@model IEnumerable<EADFinalProjet.Models.Feedback>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Feedback_Id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Feedback_Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Feedback_Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Feedback_Message)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Feedback_Id)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Feedback_Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Feedback_Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Feedback_Message)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

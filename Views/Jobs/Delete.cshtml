@@ -1,0 +1,95 @@
+﻿@model EADFinalProjet.Models.JobInfo
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>JobInfo</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.JobId)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.JobId)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.JobTitle)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.JobTitle)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Salary)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Salary)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.MajorField)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MajorField)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PostDate)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PostDate)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PhoneNumber)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PhoneNumber)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Email)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Email)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.City)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.City)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Country)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Country)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.AboutCompany)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.AboutCompany)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CompanyName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CompanyName)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}
