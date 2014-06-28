@@ -18,18 +18,26 @@
         <legend>Log in Form</legend>
         <ol>
             <li>
-                @Html.LabelFor(m => m.UserName)
-                @Html.TextBoxFor(m => m.UserName)
-                @Html.ValidationMessageFor(m => m.UserName)
+                 <div class="form_settings">
+
+                     <p><span>@Html.LabelFor(m => m.UserName)</span></p>
+                     @Html.TextBoxFor(m => m.UserName)
+                     @Html.ValidationMessageFor(m => m.UserName)
+                 </div>
             </li>
             <li>
-                @Html.LabelFor(m => m.Password)
+                 <div class="form_settings">
+                <p><span>@Html.LabelFor(m => m.Password)</span></p>
                 @Html.PasswordFor(m => m.Password)
-                @Html.ValidationMessageFor(m => m.Password)
+                @Html.ValidationMessageFor(m => m.Password)</div>
             </li>
             <li>
+                 <div class="form_settings">
+                    
                 @Html.CheckBoxFor(m => m.RememberMe)
+                      &nbsp;&nbsp;&nbsp;&nbsp;
                 @Html.LabelFor(m => m.RememberMe, new { @class = "checkbox" })
+                     </div>
             </li>
         </ol>
         <input type="submit" value="Log in" />
@@ -40,10 +48,6 @@
 }
 </section>
 
-<section class="social" id="socialLoginForm">
-    <h2>Use another service to log in.</h2>
-    @Html.Action("ExternalLoginsList", new { ReturnUrl = ViewBag.ReturnUrl })
-</section>
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")

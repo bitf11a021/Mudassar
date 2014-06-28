@@ -1,6 +1,68 @@
-﻿@{
-    ViewBag.Title = "SearchJob";
-    Layout = "~/Views/Shared/Layout.cshtml";
+﻿@model IEnumerable<EADFinalProjet.Models.JobInfo>
+
+@{
+    ViewBag.Title = "Search Job";
 }
 
-<h2>SearchJob</h2>
+<h2>Jobs</h2>
+
+
+<table>
+    <tr>
+        
+        <th>
+            @Html.DisplayNameFor(model => model.JobTitle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Salary)
+        </th>
+        
+        <th>
+            @Html.DisplayNameFor(model => model.PostDate)
+        </th>
+       <th>
+            @Html.DisplayNameFor(model => model.CompanyName)
+        </th>
+        
+        
+        <th>
+            @Html.DisplayNameFor(model => model.AboutCompany)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.City)
+        </th>
+        
+        <th>
+
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+       
+        <td>
+            @Html.DisplayFor(modelItem => item.JobTitle)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Salary)
+       </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PostDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CompanyName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AboutCompany)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.City)
+        </td>
+        <td>
+            <a href="mailto:Hmmudassar42@yahoo.com">Apply Now</a>
+        </td>
+        
+    </tr>
+}
+
+</table>

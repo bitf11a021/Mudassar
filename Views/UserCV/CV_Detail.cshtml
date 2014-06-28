@@ -11,8 +11,9 @@
             <label >Create CV</label>
         </td>
         <td>
-            <button value="Create CV" spellcheck="false" onclick="UserCV/Create"> <img src="../Images/MyImages/button.jpg" /> </button>
-           
+            <form name="CreateCV_Form" action="../../UserCV/Create">
+                <button value="CreateCV_button" spellcheck="false" onclick="UserCV/Create"> <img src="../Images/MyImages/button.jpg" /> </button>
+           </form>
         </td>
     </tr>
     <tr>
@@ -20,7 +21,9 @@
             <label >Update CV</label>|
         </td>
         <td>
-            <button value="Create CV" spellcheck="false" onclick="UserCV/Edit"> <img src="../Images/MyImages/button.jpg" /> </button>
+            <form name="UpdateCV_Form" action="../../UserCV/Edit">
+                <button value="UpdateCV_button" spellcheck="false" onclick="UserCV/Edit"> <img src="../Images/MyImages/button.jpg" /> </button>
+            </form>
         </td>
     </tr>
     <tr>
@@ -28,7 +31,10 @@
             <label >Details</label>
         </td>
         <td>
-            <button value="Create CV" spellcheck="false" onclick="UserCV/Details"> <img src="../Images/MyImages/button.jpg" /> </button>
+            <form name="DetailsCV_Form" action="../../UserCV/Details">
+            
+                <button value="Create CV" spellcheck="false" onclick="UserCV/Details"> <img src="../Images/MyImages/button.jpg" /> </button>
+             </form>
         </td>
     </tr>
     <tr>
@@ -37,8 +43,8 @@
 
         </td>
         <td>
-            <form name ="delete" action="/UserCV/Delete" >
-
+            <form name ="delete" action="../../UserCV/Delete" >
+                
             <button type="submit" value="Create CV" spellcheck="false"> <img src="../Images/MyImages/button.jpg" /></button>
            </form>
         </td>

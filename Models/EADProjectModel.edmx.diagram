@@ -4,12 +4,13 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="9fbc121ddb8d416fbad08ff3c46782d6" Name="Diagram1">
-        <EntityTypeShape EntityType="TermProjectDBModel.Feedback" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="TermProjectDBModel.JobInfo" Width="1.5" PointX="5.75" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="TermProjectDBModel.RegisteredUser" Width="1.5" PointX="0.75" PointY="3" IsExpanded="true" />
-        <EntityTypeShape EntityType="TermProjectDBModel.UserCV" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
-        <AssociationConnector Association="TermProjectDBModel.FK_UserCV_ToTable" ManuallyRouted="false" />
+      <Diagram DiagramId="9fbc121ddb8d416fbad08ff3c46782d6" Name="Diagram1" ZoomLevel="93">
+        <EntityTypeShape EntityType="TermProjectDBModel.Feedback" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="TermProjectDBModel.JobInfo" Width="1.5" PointX="5.75" PointY="3.75" IsExpanded="false" />
+        <EntityTypeShape EntityType="TermProjectDBModel.RegisteredUser" Width="1.5" PointX="0.625" PointY="0.5" IsExpanded="false" />
+        <EntityTypeShape EntityType="TermProjectDBModel.UserCV" Width="1.5" PointX="1.625" PointY="2.875" IsExpanded="false" />
+        <EntityTypeShape EntityType="TermProjectDBModel.UserCVDetail" Width="1.5" PointX="3.5" PointY="0.875" IsExpanded="false" />
+        <EntityTypeShape EntityType="TermProjectDBModel.CVDetail" Width="1.5" PointX="9.3391652392871514" PointY="8.6924546699470167" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
